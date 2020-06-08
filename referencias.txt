@@ -1,0 +1,224 @@
+
+Prefixes:
+     xsd: http://www.w3.org/2001/XMLSchema
+     ns0: http://ar.gov.afip.dif.FEV1/
+
+Global elements:
+     ns0:FECAEAConsultar(Auth: ns0:FEAuthRequest, Periodo: xsd:int, Orden: xsd:short)
+     ns0:FECAEAConsultarResponse(FECAEAConsultarResult: ns0:FECAEAGetResponse)
+     ns0:FECAEARegInformativo(Auth: ns0:FEAuthRequest, FeCAEARegInfReq: ns0:FECAEARequest)
+     ns0:FECAEARegInformativoResponse(FECAEARegInformativoResult: ns0:FECAEAResponse)
+     ns0:FECAEASinMovimientoConsultar(Auth: ns0:FEAuthRequest, CAEA: xsd:string, PtoVta: xsd:int)
+     ns0:FECAEASinMovimientoConsultarResponse(FECAEASinMovimientoConsultarResult: ns0:FECAEASinMovConsResponse)
+     ns0:FECAEASinMovimientoInformar(Auth: ns0:FEAuthRequest, PtoVta: xsd:int, CAEA: xsd:string)
+     ns0:FECAEASinMovimientoInformarResponse(FECAEASinMovimientoInformarResult: ns0:FECAEASinMovResponse)
+     ns0:FECAEASolicitar(Auth: ns0:FEAuthRequest, Periodo: xsd:int, Orden: xsd:short)
+     ns0:FECAEASolicitarResponse(FECAEASolicitarResult: ns0:FECAEAGetResponse)
+     ns0:FECAESolicitar(Auth: ns0:FEAuthRequest, FeCAEReq: ns0:FECAERequest)
+     ns0:FECAESolicitarResponse(FECAESolicitarResult: ns0:FECAEResponse)
+     ns0:FECompConsultar(Auth: ns0:FEAuthRequest, FeCompConsReq: ns0:FECompConsultaReq)
+     ns0:FECompConsultarResponse(FECompConsultarResult: ns0:FECompConsultaResponse)
+     ns0:FECompTotXRequest(Auth: ns0:FEAuthRequest)
+     ns0:FECompTotXRequestResponse(FECompTotXRequestResult: ns0:FERegXReqResponse)
+     ns0:FECompUltimoAutorizado(Auth: ns0:FEAuthRequest, PtoVta: xsd:int, CbteTipo: xsd:int)
+     ns0:FECompUltimoAutorizadoResponse(FECompUltimoAutorizadoResult: ns0:FERecuperaLastCbteResponse)
+     ns0:FEDummy()
+     ns0:FEDummyResponse(FEDummyResult: ns0:DummyResponse)
+     ns0:FEParamGetCotizacion(Auth: ns0:FEAuthRequest, MonId: xsd:string)
+     ns0:FEParamGetCotizacionResponse(FEParamGetCotizacionResult: ns0:FECotizacionResponse)
+     ns0:FEParamGetPtosVenta(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetPtosVentaResponse(FEParamGetPtosVentaResult: ns0:FEPtoVentaResponse)
+     ns0:FEParamGetTiposCbte(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposCbteResponse(FEParamGetTiposCbteResult: ns0:CbteTipoResponse)
+     ns0:FEParamGetTiposConcepto(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposConceptoResponse(FEParamGetTiposConceptoResult: ns0:ConceptoTipoResponse)
+     ns0:FEParamGetTiposDoc(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposDocResponse(FEParamGetTiposDocResult: ns0:DocTipoResponse)
+     ns0:FEParamGetTiposIva(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposIvaResponse(FEParamGetTiposIvaResult: ns0:IvaTipoResponse)
+     ns0:FEParamGetTiposMonedas(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposMonedasResponse(FEParamGetTiposMonedasResult: ns0:MonedaResponse)
+     ns0:FEParamGetTiposOpcional(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposOpcionalResponse(FEParamGetTiposOpcionalResult: ns0:OpcionalTipoResponse)
+     ns0:FEParamGetTiposPaises(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposPaisesResponse(FEParamGetTiposPaisesResult: ns0:FEPaisResponse)
+     ns0:FEParamGetTiposTributos(Auth: ns0:FEAuthRequest)
+     ns0:FEParamGetTiposTributosResponse(FEParamGetTiposTributosResult: ns0:FETributoResponse)
+
+
+Global types:
+     xsd:anyType
+     ns0:AlicIva(Id: xsd:int, BaseImp: xsd:double, Importe: xsd:double)
+     ns0:ArrayOfAlicIva(AlicIva: ns0:AlicIva[])
+     ns0:ArrayOfCbteAsoc(CbteAsoc: ns0:CbteAsoc[])
+     ns0:ArrayOfCbteTipo(CbteTipo: ns0:CbteTipo[])
+     ns0:ArrayOfComprador(Comprador: ns0:Comprador[])
+     ns0:ArrayOfConceptoTipo(ConceptoTipo: ns0:ConceptoTipo[])
+     ns0:ArrayOfDocTipo(DocTipo: ns0:DocTipo[])
+     ns0:ArrayOfErr(Err: ns0:Err[])
+     ns0:ArrayOfEvt(Evt: ns0:Evt[])
+     ns0:ArrayOfFECAEADetRequest(FECAEADetRequest: ns0:FECAEADetRequest[])
+     ns0:ArrayOfFECAEADetResponse(FECAEADetResponse: ns0:FECAEADetResponse[])
+     ns0:ArrayOfFECAEASinMov(FECAEASinMov: ns0:FECAEASinMov[])
+     ns0:ArrayOfFECAEDetRequest(FECAEDetRequest: ns0:FECAEDetRequest[])
+     ns0:ArrayOfFECAEDetResponse(FECAEDetResponse: ns0:FECAEDetResponse[])
+     ns0:ArrayOfIvaTipo(IvaTipo: ns0:IvaTipo[])
+     ns0:ArrayOfMoneda(Moneda: ns0:Moneda[])
+     ns0:ArrayOfObs(Obs: ns0:Obs[])
+     ns0:ArrayOfOpcional(Opcional: ns0:Opcional[])
+     ns0:ArrayOfOpcionalTipo(OpcionalTipo: ns0:OpcionalTipo[])
+     ns0:ArrayOfPaisTipo(PaisTipo: ns0:PaisTipo[])
+     ns0:ArrayOfPtoVenta(PtoVenta: ns0:PtoVenta[])
+     ns0:ArrayOfTributo(Tributo: ns0:Tributo[])
+     ns0:ArrayOfTributoTipo(TributoTipo: ns0:TributoTipo[])
+     ns0:CbteAsoc(Tipo: xsd:int, PtoVta: xsd:int, Nro: xsd:long, Cuit: xsd:string, CbteFch: xsd:string)
+     ns0:CbteTipo(Id: xsd:int, Desc: xsd:string, FchDesde: xsd:string, FchHasta: xsd:string)
+     ns0:CbteTipoResponse(ResultGet: ns0:ArrayOfCbteTipo, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:Comprador(DocTipo: xsd:int, DocNro: xsd:long, Porcentaje: xsd:double)
+     ns0:ConceptoTipo(Id: xsd:int, Desc: xsd:string, FchDesde: xsd:string, FchHasta: xsd:string)
+     ns0:ConceptoTipoResponse(ResultGet: ns0:ArrayOfConceptoTipo, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:Cotizacion(MonId: xsd:string, MonCotiz: xsd:double, FchCotiz: xsd:string)
+     ns0:DocTipo(Id: xsd:int, Desc: xsd:string, FchDesde: xsd:string, FchHasta: xsd:string)
+     ns0:DocTipoResponse(ResultGet: ns0:ArrayOfDocTipo, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:DummyResponse(AppServer: xsd:string, DbServer: xsd:string, AuthServer: xsd:string)
+     ns0:Err(Code: xsd:int, Msg: xsd:string)
+     ns0:Evt(Code: xsd:int, Msg: xsd:string)
+     ns0:FEAuthRequest(Token: xsd:string, Sign: xsd:string, Cuit: xsd:long)
+     ns0:FECAEACabRequest(CantReg: xsd:int, PtoVta: xsd:int, CbteTipo: xsd:int)
+     ns0:FECAEACabResponse(Cuit: xsd:long, PtoVta: xsd:int, CbteTipo: xsd:int, FchProceso: xsd:string, CantReg: xsd:int, Resultado: xsd:string, Reproceso: xsd:string)
+     ns0:FECAEADetRequest(Concepto: xsd:int, DocTipo: xsd:int, DocNro: xsd:long, CbteDesde: xsd:long, CbteHasta: xsd:long, CbteFch: xsd:string, ImpTotal: xsd:double, ImpTotConc: xsd:double, ImpNeto: xsd:double, ImpOpEx: xsd:double, ImpTrib: xsd:double, ImpIVA: xsd:double, FchServDesde: xsd:string, FchServHasta: xsd:string, FchVtoPago: xsd:string, MonId: xsd:string, MonCotiz: xsd:double, CbtesAsoc: ns0:ArrayOfCbteAsoc, Tributos: ns0:ArrayOfTributo, Iva: ns0:ArrayOfAlicIva, Opcionales: ns0:ArrayOfOpcional, Compradores: ns0:ArrayOfComprador, CAEA: xsd:string, CbteFchHsGen: xsd:string)
+     ns0:FECAEADetResponse(Concepto: xsd:int, DocTipo: xsd:int, DocNro: xsd:long, CbteDesde: xsd:long, CbteHasta: xsd:long, CbteFch: xsd:string, Resultado: xsd:string, Observaciones: ns0:ArrayOfObs, CAEA: xsd:string)
+     ns0:FECAEAGet(CAEA: xsd:string, Periodo: xsd:int, Orden: xsd:short, FchVigDesde: xsd:string, FchVigHasta: xsd:string, FchTopeInf: xsd:string, FchProceso: xsd:string, Observaciones: ns0:ArrayOfObs)
+     ns0:FECAEAGetResponse(ResultGet: ns0:FECAEAGet, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FECAEARequest(FeCabReq: ns0:FECAEACabRequest, FeDetReq: ns0:ArrayOfFECAEADetRequest)
+     ns0:FECAEAResponse(FeCabResp: ns0:FECAEACabResponse, FeDetResp: ns0:ArrayOfFECAEADetResponse, Events: ns0:ArrayOfEvt, Errors: ns0:ArrayOfErr)
+     ns0:FECAEASinMov(CAEA: xsd:string, FchProceso: xsd:string, PtoVta: xsd:int)
+     ns0:FECAEASinMovConsResponse(ResultGet: ns0:ArrayOfFECAEASinMov, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FECAEASinMovResponse(CAEA: xsd:string, FchProceso: xsd:string, PtoVta: xsd:int, Resultado: xsd:string, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FECAECabRequest(CantReg: xsd:int, PtoVta: xsd:int, CbteTipo: xsd:int)
+     ns0:FECAECabResponse(Cuit: xsd:long, PtoVta: xsd:int, CbteTipo: xsd:int, FchProceso: xsd:string, CantReg: xsd:int, Resultado: xsd:string, Reproceso: xsd:string)
+     ns0:FECAEDetRequest(Concepto: xsd:int, DocTipo: xsd:int, DocNro: xsd:long, CbteDesde: xsd:long, CbteHasta: xsd:long, CbteFch: xsd:string, ImpTotal: xsd:double, ImpTotConc: xsd:double, ImpNeto: xsd:double, ImpOpEx: xsd:double, ImpTrib: xsd:double, ImpIVA: xsd:double, FchServDesde: xsd:string, FchServHasta: xsd:string, FchVtoPago: xsd:string, MonId: xsd:string, MonCotiz: xsd:double, CbtesAsoc: ns0:ArrayOfCbteAsoc, Tributos: ns0:ArrayOfTributo, Iva: ns0:ArrayOfAlicIva, Opcionales: ns0:ArrayOfOpcional, Compradores: ns0:ArrayOfComprador)
+     ns0:FECAEDetResponse(Concepto: xsd:int, DocTipo: xsd:int, DocNro: xsd:long, CbteDesde: xsd:long, CbteHasta: xsd:long, CbteFch: xsd:string, Resultado: xsd:string, Observaciones: ns0:ArrayOfObs, CAE: xsd:string, CAEFchVto: xsd:string)
+     ns0:FECAERequest(FeCabReq: ns0:FECAECabRequest, FeDetReq: ns0:ArrayOfFECAEDetRequest)
+     ns0:FECAEResponse(FeCabResp: ns0:FECAECabResponse, FeDetResp: ns0:ArrayOfFECAEDetResponse, Events: ns0:ArrayOfEvt, Errors: ns0:ArrayOfErr)
+     ns0:FECabRequest(CantReg: xsd:int, PtoVta: xsd:int, CbteTipo: xsd:int)
+     ns0:FECabResponse(Cuit: xsd:long, PtoVta: xsd:int, CbteTipo: xsd:int, FchProceso: xsd:string, CantReg: xsd:int, Resultado: xsd:string, Reproceso: xsd:string)
+     ns0:FECompConsResponse(Concepto: xsd:int, DocTipo: xsd:int, DocNro: xsd:long, CbteDesde: xsd:long, CbteHasta: xsd:long, CbteFch: xsd:string, ImpTotal: xsd:double, ImpTotConc: xsd:double, ImpNeto: xsd:double, ImpOpEx: xsd:double, ImpTrib: xsd:double, ImpIVA: xsd:double, FchServDesde: xsd:string, FchServHasta: xsd:string, FchVtoPago: xsd:string, MonId: xsd:string, MonCotiz: xsd:double, CbtesAsoc: ns0:ArrayOfCbteAsoc, Tributos: ns0:ArrayOfTributo, Iva: ns0:ArrayOfAlicIva, Opcionales: ns0:ArrayOfOpcional, Compradores: ns0:ArrayOfComprador, Resultado: xsd:string, CodAutorizacion: xsd:string, EmisionTipo: xsd:string, FchVto: xsd:string, FchProceso: xsd:string, Observaciones: ns0:ArrayOfObs, PtoVta: xsd:int, CbteTipo: xsd:int)
+     ns0:FECompConsultaReq(CbteTipo: xsd:int, CbteNro: xsd:long, PtoVta: xsd:int)
+     ns0:FECompConsultaResponse(ResultGet: ns0:FECompConsResponse, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FECotizacionResponse(ResultGet: ns0:Cotizacion, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FEDetRequest(Concepto: xsd:int, DocTipo: xsd:int, DocNro: xsd:long, CbteDesde: xsd:long, CbteHasta: xsd:long, CbteFch: xsd:string, ImpTotal: xsd:double, ImpTotConc: xsd:double, ImpNeto: xsd:double, ImpOpEx: xsd:double, ImpTrib: xsd:double, ImpIVA: xsd:double, FchServDesde: xsd:string, FchServHasta: xsd:string, FchVtoPago: xsd:string, MonId: xsd:string, MonCotiz: xsd:double, CbtesAsoc: ns0:ArrayOfCbteAsoc, Tributos: ns0:ArrayOfTributo, Iva: ns0:ArrayOfAlicIva, Opcionales: ns0:ArrayOfOpcional, Compradores: ns0:ArrayOfComprador)
+     ns0:FEDetResponse(Concepto: xsd:int, DocTipo: xsd:int, DocNro: xsd:long, CbteDesde: xsd:long, CbteHasta: xsd:long, CbteFch: xsd:string, Resultado: xsd:string, Observaciones: ns0:ArrayOfObs)
+     ns0:FEPaisResponse(ResultGet: ns0:ArrayOfPaisTipo, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FEPtoVentaResponse(ResultGet: ns0:ArrayOfPtoVenta, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FERecuperaLastCbteResponse(PtoVta: xsd:int, CbteTipo: xsd:int, CbteNro: xsd:int, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FERegXReqResponse(RegXReq: xsd:int, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:FETributoResponse(ResultGet: ns0:ArrayOfTributoTipo, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:IvaTipo(Id: xsd:string, Desc: xsd:string, FchDesde: xsd:string, FchHasta: xsd:string)
+     ns0:IvaTipoResponse(ResultGet: ns0:ArrayOfIvaTipo, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:Moneda(Id: xsd:string, Desc: xsd:string, FchDesde: xsd:string, FchHasta: xsd:string)
+     ns0:MonedaResponse(ResultGet: ns0:ArrayOfMoneda, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:Obs(Code: xsd:int, Msg: xsd:string)
+     ns0:Opcional(Id: xsd:string, Valor: xsd:string)
+     ns0:OpcionalTipo(Id: xsd:string, Desc: xsd:string, FchDesde: xsd:string, FchHasta: xsd:string)
+     ns0:OpcionalTipoResponse(ResultGet: ns0:ArrayOfOpcionalTipo, Errors: ns0:ArrayOfErr, Events: ns0:ArrayOfEvt)
+     ns0:PaisTipo(Id: xsd:short, Desc: xsd:string)
+     ns0:PtoVenta(Nro: xsd:int, EmisionTipo: xsd:string, Bloqueado: xsd:string, FchBaja: xsd:string)
+     ns0:Tributo(Id: xsd:short, Desc: xsd:string, BaseImp: xsd:double, Alic: xsd:double, Importe: xsd:double)
+     ns0:TributoTipo(Id: xsd:short, Desc: xsd:string, FchDesde: xsd:string, FchHasta: xsd:string)
+     xsd:ENTITIES
+     xsd:ENTITY
+     xsd:ID
+     xsd:IDREF
+     xsd:IDREFS
+     xsd:NCName
+     xsd:NMTOKEN
+     xsd:NMTOKENS
+     xsd:NOTATION
+     xsd:Name
+     xsd:QName
+     xsd:anySimpleType
+     xsd:anyURI
+     xsd:base64Binary
+     xsd:boolean
+     xsd:byte
+     xsd:date
+     xsd:dateTime
+     xsd:decimal
+     xsd:double
+     xsd:duration
+     xsd:float
+     xsd:gDay
+     xsd:gMonth
+     xsd:gMonthDay
+     xsd:gYear
+     xsd:gYearMonth
+     xsd:hexBinary
+     xsd:int
+     xsd:integer
+     xsd:language
+     xsd:long
+     xsd:negativeInteger
+     xsd:nonNegativeInteger
+     xsd:nonPositiveInteger
+     xsd:normalizedString
+     xsd:positiveInteger
+     xsd:short
+     xsd:string
+     xsd:time
+     xsd:token
+     xsd:unsignedByte
+     xsd:unsignedInt
+     xsd:unsignedLong
+     xsd:unsignedShort
+
+Bindings:
+     Soap11Binding: {http://ar.gov.afip.dif.FEV1/}ServiceSoap
+     Soap12Binding: {http://ar.gov.afip.dif.FEV1/}ServiceSoap12
+
+Service: Service
+     Port: ServiceSoap (Soap11Binding: {http://ar.gov.afip.dif.FEV1/}ServiceSoap)
+         Operations:
+            FECAEAConsultar(Auth: ns0:FEAuthRequest, Periodo: xsd:int, Orden: xsd:short) -> FECAEAConsultarResult: ns0:FECAEAGetResponse
+            FECAEARegInformativo(Auth: ns0:FEAuthRequest, FeCAEARegInfReq: ns0:FECAEARequest) -> FECAEARegInformativoResult: ns0:FECAEAResponse
+            FECAEASinMovimientoConsultar(Auth: ns0:FEAuthRequest, CAEA: xsd:string, PtoVta: xsd:int) -> FECAEASinMovimientoConsultarResult: ns0:FECAEASinMovConsResponse
+            FECAEASinMovimientoInformar(Auth: ns0:FEAuthRequest, PtoVta: xsd:int, CAEA: xsd:string) -> FECAEASinMovimientoInformarResult: ns0:FECAEASinMovResponse
+            FECAEASolicitar(Auth: ns0:FEAuthRequest, Periodo: xsd:int, Orden: xsd:short) -> FECAEASolicitarResult: ns0:FECAEAGetResponse
+            FECAESolicitar(Auth: ns0:FEAuthRequest, FeCAEReq: ns0:FECAERequest) -> FECAESolicitarResult: ns0:FECAEResponse
+            FECompConsultar(Auth: ns0:FEAuthRequest, FeCompConsReq: ns0:FECompConsultaReq) -> FECompConsultarResult: ns0:FECompConsultaResponse
+            FECompTotXRequest(Auth: ns0:FEAuthRequest) -> FECompTotXRequestResult: ns0:FERegXReqResponse
+            FECompUltimoAutorizado(Auth: ns0:FEAuthRequest, PtoVta: xsd:int, CbteTipo: xsd:int) -> FECompUltimoAutorizadoResult: ns0:FERecuperaLastCbteResponse
+            FEDummy() -> FEDummyResult: ns0:DummyResponse
+            FEParamGetCotizacion(Auth: ns0:FEAuthRequest, MonId: xsd:string) -> FEParamGetCotizacionResult: ns0:FECotizacionResponse
+            FEParamGetPtosVenta(Auth: ns0:FEAuthRequest) -> FEParamGetPtosVentaResult: ns0:FEPtoVentaResponse
+            FEParamGetTiposCbte(Auth: ns0:FEAuthRequest) -> FEParamGetTiposCbteResult: ns0:CbteTipoResponse
+            FEParamGetTiposConcepto(Auth: ns0:FEAuthRequest) -> FEParamGetTiposConceptoResult: ns0:ConceptoTipoResponse
+            FEParamGetTiposDoc(Auth: ns0:FEAuthRequest) -> FEParamGetTiposDocResult: ns0:DocTipoResponse
+            FEParamGetTiposIva(Auth: ns0:FEAuthRequest) -> FEParamGetTiposIvaResult: ns0:IvaTipoResponse
+            FEParamGetTiposMonedas(Auth: ns0:FEAuthRequest) -> FEParamGetTiposMonedasResult: ns0:MonedaResponse
+            FEParamGetTiposOpcional(Auth: ns0:FEAuthRequest) -> FEParamGetTiposOpcionalResult: ns0:OpcionalTipoResponse
+            FEParamGetTiposPaises(Auth: ns0:FEAuthRequest) -> FEParamGetTiposPaisesResult: ns0:FEPaisResponse
+            FEParamGetTiposTributos(Auth: ns0:FEAuthRequest) -> FEParamGetTiposTributosResult: ns0:FETributoResponse
+
+     Port: ServiceSoap12 (Soap12Binding: {http://ar.gov.afip.dif.FEV1/}ServiceSoap12)
+         Operations:
+            FECAEAConsultar(Auth: ns0:FEAuthRequest, Periodo: xsd:int, Orden: xsd:short) -> FECAEAConsultarResult: ns0:FECAEAGetResponse
+            FECAEARegInformativo(Auth: ns0:FEAuthRequest, FeCAEARegInfReq: ns0:FECAEARequest) -> FECAEARegInformativoResult: ns0:FECAEAResponse
+            FECAEASinMovimientoConsultar(Auth: ns0:FEAuthRequest, CAEA: xsd:string, PtoVta: xsd:int) -> FECAEASinMovimientoConsultarResult: ns0:FECAEASinMovConsResponse
+            FECAEASinMovimientoInformar(Auth: ns0:FEAuthRequest, PtoVta: xsd:int, CAEA: xsd:string) -> FECAEASinMovimientoInformarResult: ns0:FECAEASinMovResponse
+            FECAEASolicitar(Auth: ns0:FEAuthRequest, Periodo: xsd:int, Orden: xsd:short) -> FECAEASolicitarResult: ns0:FECAEAGetResponse
+            FECAESolicitar(Auth: ns0:FEAuthRequest, FeCAEReq: ns0:FECAERequest) -> FECAESolicitarResult: ns0:FECAEResponse
+            FECompConsultar(Auth: ns0:FEAuthRequest, FeCompConsReq: ns0:FECompConsultaReq) -> FECompConsultarResult: ns0:FECompConsultaResponse
+            FECompTotXRequest(Auth: ns0:FEAuthRequest) -> FECompTotXRequestResult: ns0:FERegXReqResponse
+            FECompUltimoAutorizado(Auth: ns0:FEAuthRequest, PtoVta: xsd:int, CbteTipo: xsd:int) -> FECompUltimoAutorizadoResult: ns0:FERecuperaLastCbteResponse
+            FEDummy() -> FEDummyResult: ns0:DummyResponse
+            FEParamGetCotizacion(Auth: ns0:FEAuthRequest, MonId: xsd:string) -> FEParamGetCotizacionResult: ns0:FECotizacionResponse
+            FEParamGetPtosVenta(Auth: ns0:FEAuthRequest) -> FEParamGetPtosVentaResult: ns0:FEPtoVentaResponse
+            FEParamGetTiposCbte(Auth: ns0:FEAuthRequest) -> FEParamGetTiposCbteResult: ns0:CbteTipoResponse
+            FEParamGetTiposConcepto(Auth: ns0:FEAuthRequest) -> FEParamGetTiposConceptoResult: ns0:ConceptoTipoResponse
+            FEParamGetTiposDoc(Auth: ns0:FEAuthRequest) -> FEParamGetTiposDocResult: ns0:DocTipoResponse
+            FEParamGetTiposIva(Auth: ns0:FEAuthRequest) -> FEParamGetTiposIvaResult: ns0:IvaTipoResponse
+            FEParamGetTiposMonedas(Auth: ns0:FEAuthRequest) -> FEParamGetTiposMonedasResult: ns0:MonedaResponse
+            FEParamGetTiposOpcional(Auth: ns0:FEAuthRequest) -> FEParamGetTiposOpcionalResult: ns0:OpcionalTipoResponse
+            FEParamGetTiposPaises(Auth: ns0:FEAuthRequest) -> FEParamGetTiposPaisesResult: ns0:FEPaisResponse
+            FEParamGetTiposTributos(Auth: ns0:FEAuthRequest) -> FEParamGetTiposTributosResult: ns0:FETributoResponse
